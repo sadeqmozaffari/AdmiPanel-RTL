@@ -4,6 +4,7 @@ import { useStateContext } from "./contexts/ContextProvider";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
 function App() {
   const {
     activeMenu,
@@ -44,6 +45,18 @@ function App() {
               <Sidebar />
             </div>
           )}
+
+          <div
+            className={`dark:bg-main-dark-bg bg-gray-100 min-h-screen max-w-full grow ${
+              activeMenu && "lg:pr-72"
+            }`}
+          >
+            <div
+              className="sticky top-0 left-0 bg-main-bg dark:bg-main-dark-bg 
+           navbar "
+            ></div>
+            <Navbar />
+          </div>
         </div>
       </BrowserRouter>
     </div>
