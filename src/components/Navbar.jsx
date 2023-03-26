@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { useStateContext } from "../contexts/ContextProvider";
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
@@ -11,9 +10,11 @@ import Cart from "./Cart";
 import Chat from "./Chat";
 import Notification from "./Notification";
 import UserProfile from "./UserProfile";
+import Tippy from "@tippyjs/react";
+import "tippy.js/dist/tippy.css"; // optional
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
-  <TooltipComponent content={title} position="BottomLeft">
+  <Tippy content={title} placement="bottom-end">
     <button
       type="button"
       onClick={customFunc}
@@ -26,7 +27,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       />
       {icon}
     </button>
-  </TooltipComponent>
+  </Tippy>
 );
 
 const Navbar = () => {
@@ -84,11 +85,7 @@ const Navbar = () => {
           dotColor="#03C9D7"
           icon={<RiNotification3Line />}
         />
-        <TooltipComponent
-          enableRtl={true}
-          content="پروفایل"
-          position="BottomCenter"
-        >
+        <Tippy content="پروفایل" placement="bottom">
           <div
             className="flex items-center gap-2 cursor-pointer p-1 hover:bg-gray-100 rounded-lg "
             onClick={() => handleClick("userProfile")}
@@ -100,7 +97,7 @@ const Navbar = () => {
             </p>
             <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
-        </TooltipComponent>
+        </Tippy>
         {isClicked.cart && <Cart />}
         {isClicked.chat && <Chat />}
         {isClicked.notification && <Notification />}
