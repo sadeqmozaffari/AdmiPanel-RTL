@@ -8,6 +8,8 @@ import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Ecommerce from "./pages/Ecommerce";
 import ThemeSettings from "./components/ThemeSettings";
+import Customers from "./pages/Customers";
+import User from "./pages/User";
 
 function App() {
   const {
@@ -63,6 +65,8 @@ function App() {
                 {/* Dashboard */}
                 <Route path="/" element={<Ecommerce />} />
                 <Route path="/ecommerce" element={<Ecommerce />} />
+                <Route path="/customers" element={<Customers />} />
+                <Route path="/users" element={<User />} />
               </Routes>
             </div>
           </div>
