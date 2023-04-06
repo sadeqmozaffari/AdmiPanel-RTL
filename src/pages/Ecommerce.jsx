@@ -3,6 +3,8 @@ import { useStateContext } from "../contexts/ContextProvider";
 import Button from "../components/Button";
 import { GoPrimitiveDot } from "react-icons/go";
 import { earningData } from "../data/dummy";
+import SLineChart from "../components/Charts/SLineChart";
+import SparkLine from "../components/Charts/SparkLine";
 
 const Ecommerce = () => {
   const { currentColor } = useStateContext();
@@ -100,16 +102,8 @@ const Ecommerce = () => {
                   </span>
                 </p>
               </div>
-              <div className="mt-5 ltr">
-                {/* <SparkLine
-                  currentColor={currentColor}
-                  id="line-sparkline"
-                  type="Line"
-                  height="80px"
-                  width="250px"
-                  data={SparklineAreaData}
-                  color={currentColor}
-                /> */}
+              <div className="rtl">
+                <SparkLine width={320} height={260} />
               </div>
               <div className="mt-10">
                 <Button
@@ -121,7 +115,7 @@ const Ecommerce = () => {
               </div>
             </div>
             <div className="rtl">
-              {/* <Stacked width="320px" height="360px" /> */}
+              <SLineChart width={920} height={500} />
             </div>
           </div>
         </div>
