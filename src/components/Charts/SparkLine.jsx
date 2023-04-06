@@ -74,11 +74,11 @@ export default function SparkLine({ width, height }) {
       <Legend />
       <Line
         type="monotone"
-        dataKey="pv"
+        dataKey="هزینه"
         stroke="#8884d8"
         activeDot={{ r: 8 }}
       />
-      <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+      <Line type="monotone" dataKey="بودوجه" stroke="#82ca9d" />
     </LineChart>
   );
 }

@@ -65,7 +65,7 @@ const Ecommerce = () => {
               به روز رسانی درآمدها
             </p>
             <div className="flex items-center gap-4">
-              <p className="flex items-center gap-2 text-gray-600 hover:drop-shadow-xl cursor-pointer">
+              <p className="flex items-center gap-2 text-purple-600 hover:drop-shadow-xl cursor-pointer">
                 <GoPrimitiveDot className="dark:text-gray-50" />
                 <span className="text-sm dark:text-white">هزینه ها</span>
               </p>
@@ -115,7 +115,7 @@ const Ecommerce = () => {
               </div>
             </div>
             <div className="rtl">
-              <SLineChart width={920} height={500} />
+              <SLineChart width={620} height={500} />
             </div>
           </div>
         </div>

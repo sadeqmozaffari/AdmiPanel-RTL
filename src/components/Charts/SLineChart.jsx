@@ -63,9 +63,9 @@ const SLineChart = ({ width, height }) => {
       height={height}
       data={data}
       margin={{
-        top: 10,
+        top: 30,
         right: 0,
-        bottom: 0,
+        bottom: 20,
         left: 0,
       }}
     >
