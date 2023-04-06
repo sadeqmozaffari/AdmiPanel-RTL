@@ -5,8 +5,8 @@
 
 ## npm install 
 
-## light 
+## light mode
 ![Screenshot](Screenshot.jpg)
 
-## dark 
+## dark mode
 ![Screenshot](ScreenshotDarkjpg.jpg)
